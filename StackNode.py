@@ -1,4 +1,4 @@
-class Node:
+class StackNode:
 	def __init__(self):
 		self.data = None
 		self.next =  None
@@ -9,4 +9,4 @@ class Node:
 	def getNext(self):
 		return self.next
 	def setNext(self,next):
-		self.next = next		
+		self.next = next

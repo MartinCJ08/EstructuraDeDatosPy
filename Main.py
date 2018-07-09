@@ -1,5 +1,5 @@
 from Stack import *
-from Queue import *
+# from Queue import *
 
 def main():
 	myStack = Stack()
@@ -7,8 +7,9 @@ def main():
 	myStack.push(30)
 	myStack.push(20)
 	myStack.print()
-
-	
+	myStack.pop()
+	print("Pop")
+	myStack.print()	
 
 if __name__ == '__main__':
 	main()

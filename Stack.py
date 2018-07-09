@@ -1,14 +1,14 @@
-from Node import *
+from StackNode import *
 
 class Stack:
 	def __init__(self):
 		self.top = None
 	def push(self,data):
 		if self.top == None:
-			self.top = Node()
+			self.top = StackNode()
 			self.top.setData(data)
 		else:
-			temp = Node()
+			temp = StackNode()
 			temp.setData(data)
 			temp.setNext(self.top)
 			self.top = temp
