@@ -1,20 +1,35 @@
-from DoubleNode import *
+from QueueNode import *
 class Queue:
+	front = None
+
 	def __init(self):
-		self.top = None
-		self.final = None
-	def queue(self,data):
+		self.front = None
+		self.back = None
+	def enqueue(self,data):
 		#add an element to the queue
-		if self.top == None:
-			self.top = NodeQueue()
-			self.top.setData(data)
-			self.final = self.top
+		if self.front == None:
+			self.front = QueueNode()
+			self.front.setData(data)
+			self.back = self.front
 		else:
-			pass
+			self.temp = QueueNode()
+			self.temp.setData(data)
+			self.back.setPrev(self.temp)
+			self.back = self.temp
+			self.temp = None
 		
-	def desqueue(self):
-		#remove de first element from the queue
-		pass
-	def consult(self):
-		#Consult the first element from the queue
-		pass
+	def dequeue(self):
+		#remove the first element from the queue
+		if not self.front == None:
+			data = self.front.getData()
+			temp = self.front.getPrev()
+			self.front = temp
+			temp = None
+			
+		return data
+
+	def print(self):
+		node = self.front
+		while node != None:
+			print(node.getData())
+			node = node.getPrev()
