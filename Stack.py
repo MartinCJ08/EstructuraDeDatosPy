@@ -1,6 +1,7 @@
 from StackNode import *
+from StructureData import *
 
-class Stack:
+class Stack(StructureData):
 	def __init__(self):
 		self.top = None
 	def push(self,data):

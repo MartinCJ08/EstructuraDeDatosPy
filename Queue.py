@@ -1,5 +1,7 @@
 from QueueNode import *
-class Queue:
+from StructureData import * 
+
+class Queue(StructureData):
 	front = None
 
 	def __init(self):
@@ -29,6 +31,7 @@ class Queue:
 		return data
 
 	def print(self):
+		# super(Queue, self).print() # Manera de imprimir el concepto 
 		node = self.front
 		while node != None:
 			print(node.getData())
